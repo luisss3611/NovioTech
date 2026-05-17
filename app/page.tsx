@@ -324,10 +324,6 @@ export default function Home() {
   </svg>
 </div>
 
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-sm">
-                IN
-              </div>
-
             </div>
 
           </div>
