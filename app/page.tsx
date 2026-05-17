@@ -75,7 +75,6 @@ export default function Home() {
 
         </div>
 
-<div className="absolute bottom-[-20px] left-0 z-50 w-full pointer-events-none">
 </section>
 
     <section className="relative z-20 -mt-16 bg-[#050505] px-6 pt-40 pb-28 text-white md:px-10">
