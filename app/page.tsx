@@ -233,7 +233,7 @@ export default function Home() {
               </p>
 
               <p className="mt-1 text-sm text-white/45">
-                Got questions? Call us anytime.
+                Got questions? Call us 24/7
               </p>
 
             </div>
