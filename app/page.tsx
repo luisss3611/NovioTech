@@ -249,10 +249,10 @@ export default function Home() {
             <div className="mt-6 space-y-4 text-sm text-white/55">
 
               <p>Monday – Friday</p>
-              <p className="text-white">09:00 am – 06:00 pm</p>
+              <p className="text-white">08:00 am – 06:00 pm</p>
 
               <p className="pt-2">Saturday</p>
-              <p className="text-white">10:00 am – 04:00 pm</p>
+              <p className="text-white">09:00 am – 05:00 pm</p>
 
             </div>
 
