@@ -1,6 +1,5 @@
 import Image from "next/image"
 import logo from "./assets/novio-logo-white-transparent.png"
-import tornPaper from "./assets/torn-paper.png"
 
 export default function Home() {
   return (
@@ -77,23 +76,7 @@ export default function Home() {
         </div>
 
 <div className="absolute bottom-[-20px] left-0 z-50 w-full pointer-events-none">
-  <Image
-    src={tornPaper}
-    alt=""
-    className="
-      w-full
-      h-[70px]
-      md:h-[110px]
-      object-cover
-      brightness-0
-      contrast-125
-      drop-shadow-[0_-25px_40px_rgba(0,0,0,0.9)]
-      scale-[1.02]
-    "
-    priority
-  />
-</div>
-      </section>
+</section>
 
     <section className="relative z-20 -mt-16 bg-[#050505] px-6 pt-40 pb-28 text-white md:px-10">
   
