@@ -78,7 +78,7 @@ export default function Home() {
                 <a href="#" className="transition hover:text-white">Home</a>
                 <a href="#" className="transition hover:text-white">About Us</a>
                 <a href="#" className="transition hover:text-white">Services</a>
-                <a href="contact.tsx" className="transition hover:text-white">Contact Us</a>
+                <a href="/contact" className="transition hover:text-white">Contact Us</a>
                 <a href="#" className="transition hover:text-white">Referral Program</a>
               </nav>
 
@@ -113,7 +113,7 @@ export default function Home() {
                 <a href="#" onClick={() => setOpen(false)}>Home</a>
                 <a href="#" onClick={() => setOpen(false)}>About Us</a>
                 <a href="#" onClick={() => setOpen(false)}>Services</a>
-                <a href="contact.tsx" onClick={() => setOpen(false)}>Contact Us</a>
+                <a href="/contact" onClick={() => setOpen(false)}>Contact Us</a>
                 <a href="#" onClick={() => setOpen(false)}>Referral Program</a>
               </nav>
 
@@ -254,7 +254,7 @@ export default function Home() {
                 Referral Program
               </a>
 
-              <a href="contact.tsx" className="hover:text-white">
+              <a href="/contact" className="hover:text-white">
                 Contact Us
               </a>
 
@@ -264,7 +264,7 @@ export default function Home() {
 
           <div>
 
-            <h3 href="contact.tsx" className="text-lg font-semibold">
+            <h3 href="/contact" className="text-lg font-semibold">
               Contact Us
             </h3>
 
