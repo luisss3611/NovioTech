@@ -81,13 +81,19 @@ export default function Home() {
 
         </div>
 
-        {/* Paper Cut Transition */}
-        <div className="absolute bottom-0 left-0 z-20 w-full overflow-hidden leading-none">
-          <svg
-            viewBox="0 0 1440 140"
-            preserveAspectRatio="none"
-            className="h-28 w-full"
-          >
+{/* Paper Cut Transition */}
+
+<div className="relative z-20 -mt-24 w-full overflow-hidden leading-none">
+
+  <svg
+
+    viewBox="0 0 1440 140"
+
+    preserveAspectRatio="none"
+
+    className="h-40 md:h-56 w-full"
+
+  >
             <path
               d="M0,90 C240,130 420,20 690,70 C940,120 1160,35 1440,80 L1440,140 L0,140 Z"
               fill="#050505"
