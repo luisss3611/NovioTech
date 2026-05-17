@@ -81,25 +81,27 @@ export default function Home() {
 
         </div>
 
-{/* Paper Cut Transition */}
-
-<div className="relative z-20 -mt-24 w-full overflow-hidden leading-none">
-
+{/* Torn Paper Transition */}
+<div className="absolute bottom-0 left-0 z-20 w-full overflow-hidden leading-none">
   <svg
-
-    viewBox="0 0 1440 140"
-
+    viewBox="0 0 1440 180"
     preserveAspectRatio="none"
-
-    className="h-40 md:h-56 w-full"
-
+    className="h-32 md:h-44 w-full"
   >
-            <path
-              d="M0,90 C240,130 420,20 690,70 C940,120 1160,35 1440,80 L1440,140 L0,140 Z"
-              fill="#050505"
-            />
-          </svg>
-        </div>
+    <path
+      d="M0,95 
+      L45,105 L90,88 L135,112 L180,92 
+      L230,120 L275,86 L320,105 L370,78 
+      L420,115 L470,90 L525,128 L580,82 
+      L640,110 L700,76 L760,122 L820,94 
+      L880,132 L940,84 L1000,110 L1060,92 
+      L1120,124 L1180,80 L1240,108 L1300,90 
+      L1360,118 L1440,96 
+      L1440,180 L0,180 Z"
+      fill="#050505"
+    />
+  </svg>
+</div>
 
       </section>
 
