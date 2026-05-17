@@ -76,7 +76,7 @@ export default function Home() {
 
         </div>
 
-<div className="absolute bottom-[-35px] left-0 z-30 w-full pointer-events-none">
+<div className="absolute bottom-[-20px] left-0 z-50 w-full pointer-events-none">
   <Image
     src={tornPaper}
     alt=""
@@ -95,8 +95,8 @@ export default function Home() {
 </div>
       </section>
 
-      <section className="relative z-20 bg-[#0F0F10] px-6 py-28 text-white md:px-10">
-
+    <section className="relative z-20 -mt-16 bg-[#050505] px-6 pt-40 pb-28 text-white md:px-10">
+  
         <div className="mx-auto max-w-6xl">
 
           <p className="mb-4 text-xs uppercase tracking-[0.35em] text-white/40">
