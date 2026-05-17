@@ -77,7 +77,7 @@ export default function Home() {
 
 </section>
 
-    <section className="relative z-20 -mt-16 bg-[#050505] px-6 pt-40 pb-28 text-white md:px-10">
+<section className="relative z-20 bg-[#050505] px-6 py-28 text-white md:px-10">
   
         <div className="mx-auto max-w-6xl">
 
