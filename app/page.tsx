@@ -78,8 +78,8 @@ export default function Home() {
 
       </section>
 
-      <div className="relative z-30 -mt-32 h-32 overflow-hidden bg-transparent md:-mt-44 md:h-44">
-        <Image
+<div className="absolute bottom-[-2px] left-0 z-30 w-full pointer-events-none">
+  <Image
           src={tornPaper}
           alt=""
 className="
