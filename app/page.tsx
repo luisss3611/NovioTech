@@ -37,15 +37,113 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-black/65" />
 
-        <header className="absolute top-0 left-0 z-20 w-full px-6 py-6 md:px-10">
-          <Image
-            src={logo}
-            alt="Novio Technologies"
-            className="w-32 md:w-44 h-auto"
-            priority
-          />
-        </header>
+<header className="absolute top-0 left-0 z-20 w-full px-6 py-6 md:px-10">
 
+  <div className="flex items-center justify-between">
+
+    {/* Logo */}
+    <Image
+      src={logo}
+      alt="Novio Technologies"
+      className="w-32 md:w-44 h-auto"
+      priority
+    />
+
+    {/* Right Side */}
+    <div className="hidden xl:flex items-center gap-8 text-white">
+
+      {/* Navigation */}
+      <nav className="flex items-center gap-8 text-sm font-medium text-white/75">
+
+        <a href="#" className="transition hover:text-white">
+          Home
+        </a>
+
+        <a href="#" className="transition hover:text-white">
+          About Us
+        </a>
+
+        <div className="group relative cursor-pointer">
+
+          <div className="flex items-center gap-2 transition hover:text-white">
+            <span>Services</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="mt-[1px]"
+            >
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </div>
+
+        </div>
+
+        <a href="#" className="transition hover:text-white">
+          Contact Us
+        </a>
+
+        <a href="#" className="transition hover:text-white">
+          Referral Program
+        </a>
+
+      </nav>
+
+      {/* Divider */}
+      <div className="h-10 w-px bg-white/15" />
+
+      {/* CTA */}
+      <div className="flex items-center gap-5">
+
+        <button className="group flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:scale-105">
+
+          <span>Get Started</span>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="transition group-hover:translate-x-1"
+          >
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
+          </svg>
+
+        </button>
+
+        {/* Call */}
+        <div className="leading-tight">
+
+          <p className="text-[11px] uppercase tracking-[0.2em] text-white/45">
+            Call us now:
+          </p>
+
+          <p className="mt-1 text-base font-semibold text-white">
+            +49 177 8932219
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-6">
 
           <p className="mb-4 text-[10px] md:text-sm uppercase tracking-[0.35em] text-white/50">
