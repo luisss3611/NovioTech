@@ -50,10 +50,10 @@ export default function Home() {
     />
 
     {/* Right Side */}
-    <div className="hidden xl:flex items-center gap-8 text-white">
+    <div className="hidden xl:flex items-center gap-6 text-white">
 
       {/* Navigation */}
-      <nav className="flex items-center gap-8 text-sm font-medium text-white/75">
+      <nav className="flex items-center gap-7 text-[14px] font-medium text-white/80">
 
         <a href="#" className="transition hover:text-white">
           Home
@@ -63,26 +63,23 @@ export default function Home() {
           About Us
         </a>
 
-        <div className="group relative cursor-pointer">
+        <div className="flex items-center gap-1 cursor-pointer transition hover:text-white">
 
-          <div className="flex items-center gap-2 transition hover:text-white">
-            <span>Services</span>
+          <span>Services</span>
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="mt-[1px]"
-            >
-              <path d="m6 9 6 6 6-6"/>
-            </svg>
-          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
 
         </div>
 
@@ -97,12 +94,29 @@ export default function Home() {
       </nav>
 
       {/* Divider */}
-      <div className="h-10 w-px bg-white/15" />
+      <div className="h-8 w-px bg-white/10" />
 
       {/* CTA */}
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-4">
 
-        <button className="group flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:scale-105">
+        <button
+          className="
+            group
+            flex
+            items-center
+            gap-3
+            rounded-full
+            bg-[#a695ff]
+            px-6
+            py-3
+            text-sm
+            font-semibold
+            text-black
+            transition
+            hover:scale-105
+            hover:bg-[#b3a5ff]
+          "
+        >
 
           <span>Get Started</span>
 
@@ -124,14 +138,14 @@ export default function Home() {
 
         </button>
 
-        {/* Call */}
+        {/* Phone */}
         <div className="leading-tight">
 
-          <p className="text-[11px] uppercase tracking-[0.2em] text-white/45">
+          <p className="text-[10px] uppercase tracking-[0.22em] text-white/40">
             Call us now:
           </p>
 
-          <p className="mt-1 text-base font-semibold text-white">
+          <p className="mt-1 text-[17px] font-semibold text-white">
             +49 177 8932219
           </p>
 
@@ -143,8 +157,7 @@ export default function Home() {
 
   </div>
 
-</header>
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-6">
+</header>        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-6">
 
           <p className="mb-4 text-[10px] md:text-sm uppercase tracking-[0.35em] text-white/50">
             DIGITAL EXPERIENCES
