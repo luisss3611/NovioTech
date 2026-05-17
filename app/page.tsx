@@ -81,26 +81,55 @@ export default function Home() {
 
         </div>
 
-{/* Torn Paper Transition */}
+{/* Real Torn Paper Transition */}
 <div className="absolute bottom-0 left-0 z-20 w-full overflow-hidden leading-none">
+
+  {/* Shadow */}
+  <div className="absolute inset-x-0 top-0 h-12 bg-black/40 blur-2xl" />
+
   <svg
-    viewBox="0 0 1440 180"
+    viewBox="0 0 1440 220"
     preserveAspectRatio="none"
-    className="h-32 md:h-44 w-full"
+    className="relative h-40 md:h-56 w-full"
   >
     <path
-      d="M0,95 
-      L45,105 L90,88 L135,112 L180,92 
-      L230,120 L275,86 L320,105 L370,78 
-      L420,115 L470,90 L525,128 L580,82 
-      L640,110 L700,76 L760,122 L820,94 
-      L880,132 L940,84 L1000,110 L1060,92 
-      L1120,124 L1180,80 L1240,108 L1300,90 
-      L1360,118 L1440,96 
-      L1440,180 L0,180 Z"
+      d="
+      M0,80
+      C60,120 120,60 180,100
+      C240,140 300,70 360,110
+      C420,150 480,75 540,120
+      C600,160 660,85 720,130
+      C780,170 840,95 900,135
+      C960,175 1020,90 1080,125
+      C1140,160 1200,85 1260,115
+      C1320,145 1380,95 1440,120
+      L1440,220
+      L0,220
+      Z
+      "
       fill="#050505"
     />
+
+    {/* subtle paper edge */}
+    <path
+      d="
+      M0,80
+      C60,120 120,60 180,100
+      C240,140 300,70 360,110
+      C420,150 480,75 540,120
+      C600,160 660,85 720,130
+      C780,170 840,95 900,135
+      C960,175 1020,90 1080,125
+      C1140,160 1200,85 1260,115
+      C1320,145 1380,95 1440,120
+      "
+      fill="none"
+      stroke="rgba(255,255,255,0.06)"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
   </svg>
+
 </div>
 
       </section>
