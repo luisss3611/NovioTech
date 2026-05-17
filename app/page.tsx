@@ -1,3 +1,6 @@
+import Image from "next/image"
+import logo from "./assets/novio-logo-black.png"
+
 export default function Home() {
   return (
     <main className="relative h-screen overflow-hidden bg-black">
@@ -34,6 +37,16 @@ export default function Home() {
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/65" />
+
+      {/* Navbar */}
+      <header className="absolute top-0 left-0 z-20 w-full px-6 py-6 md:px-10">
+        <Image
+          src={logo}
+          alt="Novio Technologies"
+          className="w-32 md:w-44 h-auto"
+          priority
+        />
+      </header>
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-6">
