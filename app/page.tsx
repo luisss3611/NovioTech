@@ -1,5 +1,5 @@
 import Image from "next/image"
-import logo from "./assets/novio-logo-black.png"
+import logo from "./assets/novio-logo-black-transparent.png"
 
 export default function Home() {
   return (
