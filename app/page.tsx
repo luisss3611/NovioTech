@@ -106,7 +106,7 @@ export default function Home() {
             items-center
             gap-3
             rounded-full
-            bg-[#a695ff]
+            bg-[#fff]
             px-6
             py-3
             text-sm
