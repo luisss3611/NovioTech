@@ -5,7 +5,7 @@ export default function Home() {
       {/* Desktop Video */}
       <div className="absolute inset-0 overflow-hidden hidden md:block">
         <iframe
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 scale-150 pointer-events-none opacity-70"
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 scale-100 pointer-events-none opacity-70"
           src="https://www.youtube.com/embed/8BsVwcr4UT4?autoplay=1&mute=1&controls=0&loop=1&playlist=8BsVwcr4UT4&playsinline=1&showinfo=0&modestbranding=1&rel=0"
           title="Desktop Background Video"
           allow="autoplay; fullscreen"
