@@ -209,8 +209,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative bg-black px-6 pt-24 pb-8 text-white md:px-10">
-
+<footer className="relative bg-[#050505] px-6 pt-24 pb-8 text-white md:px-10">
+  
         <div className="mx-auto grid max-w-7xl gap-14 border-t border-white/10 pt-16 md:grid-cols-4">
 
           <div>
