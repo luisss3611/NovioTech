@@ -76,23 +76,23 @@ export default function Home() {
 
         </div>
 
-        <div className="absolute bottom-[-2px] left-0 z-30 w-full pointer-events-none">
-          <Image
-            src={tornPaper}
-            alt=""
-            className="
-              w-full
-              h-[130px]
-              md:h-[190px]
-              object-cover
-              contrast-125
-              drop-shadow-[0_-25px_40px_rgba(0,0,0,0.9)]
-              scale-[1.02]
-            "
-            priority
-          />
-        </div>
-
+<div className="absolute bottom-[-35px] left-0 z-30 w-full pointer-events-none">
+  <Image
+    src={tornPaper}
+    alt=""
+    className="
+      w-full
+      h-[70px]
+      md:h-[110px]
+      object-cover
+      brightness-0
+      contrast-125
+      drop-shadow-[0_-25px_40px_rgba(0,0,0,0.9)]
+      scale-[1.02]
+    "
+    priority
+  />
+</div>
       </section>
 
       <section className="relative z-20 bg-[#0F0F10] px-6 py-28 text-white md:px-10">
