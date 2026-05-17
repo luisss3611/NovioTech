@@ -82,8 +82,13 @@ export default function Home() {
         <Image
           src={tornPaper}
           alt=""
-          className="h-full w-full object-cover brightness-0"
-          priority
+className="
+  w-full
+  h-auto
+  contrast-125
+  drop-shadow-[0_-25px_40px_rgba(0,0,0,0.9)]
+  scale-[1.02]
+"          priority
         />
       </div>
 
