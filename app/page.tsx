@@ -37,127 +37,125 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-black/65" />
 
-<header className="absolute top-0 left-0 z-20 w-full px-6 py-6 md:px-10">
+        {/* Header */}
+        <header className="absolute top-0 left-0 z-20 w-full px-6 py-6 md:px-10">
 
-  <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between">
 
-    {/* Logo */}
-    <Image
-      src={logo}
-      alt="Novio Technologies"
-      className="w-32 md:w-44 h-auto"
-      priority
-    />
+            <Image
+              src={logo}
+              alt="Novio Technologies"
+              className="w-32 md:w-44 h-auto"
+              priority
+            />
 
-    {/* Right Side */}
-    <div className="hidden xl:flex items-center gap-6 text-white">
+            <div className="hidden xl:flex items-center gap-6 text-white">
 
-      {/* Navigation */}
-      <nav className="flex items-center gap-7 text-[14px] font-medium text-white/80">
+              <nav className="flex items-center gap-7 text-[14px] font-medium text-white/80">
 
-        <a href="#" className="transition hover:text-white">
-          Home
-        </a>
+                <a href="#" className="transition hover:text-white">
+                  Home
+                </a>
 
-        <a href="#" className="transition hover:text-white">
-          About Us
-        </a>
+                <a href="#" className="transition hover:text-white">
+                  About Us
+                </a>
 
-        <div className="flex items-center gap-1 cursor-pointer transition hover:text-white">
+                <div className="flex items-center gap-1 cursor-pointer transition hover:text-white">
 
-          <span>Services</span>
+                  <span>Services</span>
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="m6 9 6 6 6-6"/>
-          </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6"/>
+                  </svg>
 
-        </div>
+                </div>
 
-        <a href="#" className="transition hover:text-white">
-          Contact Us
-        </a>
+                <a href="#" className="transition hover:text-white">
+                  Contact Us
+                </a>
 
-        <a href="#" className="transition hover:text-white">
-          Referral Program
-        </a>
+                <a href="#" className="transition hover:text-white">
+                  Referral Program
+                </a>
 
-      </nav>
+              </nav>
 
-      {/* Divider */}
-      <div className="h-8 w-px bg-white/10" />
+              <div className="h-8 w-px bg-white/10" />
 
-      {/* CTA */}
-      <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4">
 
-        <button
-          className="
-            group
-            flex
-            items-center
-            gap-3
-            rounded-full
-            bg-[#fff]
-            px-6
-            py-3
-            text-sm
-            font-semibold
-            text-black
-            transition
-            hover:scale-105
-            hover:bg-[#b3a5ff]
-          "
-        >
+                <button
+                  className="
+                    group
+                    flex
+                    items-center
+                    gap-3
+                    rounded-full
+                    bg-white
+                    px-6
+                    py-3
+                    text-sm
+                    font-semibold
+                    text-black
+                    transition
+                    hover:scale-105
+                    hover:bg-[#b3a5ff]
+                  "
+                >
 
-          <span>Get Started</span>
+                  <span>Get Started</span>
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="transition group-hover:translate-x-1"
-          >
-            <path d="M5 12h14"/>
-            <path d="m12 5 7 7-7 7"/>
-          </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="transition group-hover:translate-x-1"
+                  >
+                    <path d="M5 12h14"/>
+                    <path d="m12 5 7 7-7 7"/>
+                  </svg>
 
-        </button>
+                </button>
 
-        {/* Phone */}
-        <div className="leading-tight">
+                <div className="leading-tight">
 
-          <p className="text-[10px] uppercase tracking-[0.22em] text-white/40">
-            Call us now:
-          </p>
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-white/40">
+                    Call us now:
+                  </p>
 
-          <p className="mt-1 text-[17px] font-semibold text-white">
-            +49 177 8932219
-          </p>
+                  <p className="mt-1 text-[17px] font-semibold text-white">
+                    +49 177 8932219
+                  </p>
 
-        </div>
+                </div>
 
-      </div>
+              </div>
 
-    </div>
+            </div>
 
-  </div>
+          </div>
 
-</header>        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-6">
+        </header>
+
+        {/* Hero */}
+        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-6">
 
           <p className="mb-4 text-[10px] md:text-sm uppercase tracking-[0.35em] text-white/50">
             DIGITAL EXPERIENCES
@@ -186,10 +184,11 @@ export default function Home() {
 
         </div>
 
-</section>
+      </section>
 
-<section className="relative z-20 bg-[#050505] px-6 py-28 text-white md:px-10">
-  
+      {/* Section */}
+      <section className="relative z-20 bg-[#050505] px-6 py-28 text-white md:px-10">
+
         <div className="mx-auto max-w-6xl">
 
           <p className="mb-4 text-xs uppercase tracking-[0.35em] text-white/40">
@@ -208,6 +207,146 @@ export default function Home() {
         </div>
 
       </section>
+
+      {/* Footer */}
+      <footer className="relative bg-black px-6 pt-24 pb-8 text-white md:px-10">
+
+        <div className="mx-auto grid max-w-7xl gap-14 border-t border-white/10 pt-16 md:grid-cols-4">
+
+          <div>
+
+            <Image
+              src={logo}
+              alt="Novio Technologies"
+              className="w-36 h-auto"
+            />
+
+            <p className="mt-8 max-w-sm text-sm leading-relaxed text-white/50">
+              Novio Technologies creates premium websites and digital experiences
+              for modern service based businesses.
+            </p>
+
+            <div className="mt-8">
+
+              <p className="text-lg font-semibold text-white">
+                +49 177 8932219
+              </p>
+
+              <p className="mt-1 text-sm text-white/45">
+                Got questions? Call us anytime.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <h3 className="text-lg font-semibold">
+              Working Hours
+            </h3>
+
+            <div className="mt-6 space-y-4 text-sm text-white/55">
+
+              <p>Monday – Friday</p>
+              <p className="text-white">09:00 am – 06:00 pm</p>
+
+              <p className="pt-2">Saturday</p>
+              <p className="text-white">10:00 am – 04:00 pm</p>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <h3 className="text-lg font-semibold">
+              Navigation
+            </h3>
+
+            <nav className="mt-6 flex flex-col gap-4 text-sm text-white/55">
+
+              <a href="#" className="hover:text-white">
+                Home
+              </a>
+
+              <a href="#" className="hover:text-white">
+                About Us
+              </a>
+
+              <a href="#" className="hover:text-white">
+                Services
+              </a>
+
+              <a href="#" className="hover:text-white">
+                Referral Program
+              </a>
+
+              <a href="#" className="hover:text-white">
+                Contact Us
+              </a>
+
+            </nav>
+
+          </div>
+
+          <div>
+
+            <h3 className="text-lg font-semibold">
+              Contact Us
+            </h3>
+
+            <div className="mt-6 space-y-4 text-sm text-white/55">
+
+              <div>
+                <p className="text-white">Location:</p>
+                <p>Germany</p>
+              </div>
+
+              <div>
+                <p className="text-white">Email:</p>
+                <p>contact@noviotechnologies.com</p>
+              </div>
+
+            </div>
+
+            <div className="mt-8 flex gap-3">
+
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-sm">
+                IG
+              </div>
+
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-sm">
+                IN
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mx-auto mt-16 flex max-w-7xl flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
+
+          <p>
+            Copyright © 2026 Novio Technologies. All rights reserved.
+          </p>
+
+          <div className="flex gap-6">
+
+            <a href="#" className="hover:text-white">
+              Privacy Policy
+            </a>
+
+            <a href="#" className="hover:text-white">
+              Terms & Conditions
+            </a>
+
+          </div>
+
+        </div>
+
+      </footer>
 
     </main>
   )
