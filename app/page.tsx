@@ -299,8 +299,8 @@ export default function Home() {
             <div className="mt-6 space-y-4 text-sm text-white/55">
 
               <div>
-                <p className="text-white">Location:</p>
-                <p>Germany</p>
+                <p className="text-white">Address:</p>
+                <p>Based in Germany</p>
               </div>
 
               <div>
