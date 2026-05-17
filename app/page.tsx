@@ -1,5 +1,6 @@
 import Image from "next/image"
 import logo from "./assets/novio-logo-white-transparent.png"
+import tornPaper from "./assets/torn-paper.png"
 
 export default function Home() {
   return (
@@ -75,71 +76,22 @@ export default function Home() {
 
         </div>
 
-        {/* Real Paper Rip Transition */}
-        <div className="absolute bottom-0 left-0 z-30 w-full overflow-hidden leading-none">
-
-          <div className="absolute inset-x-0 top-6 h-16 bg-black/60 blur-2xl" />
-
-          <svg
-            viewBox="0 0 1440 220"
-            preserveAspectRatio="none"
-            className="relative h-40 w-full md:h-56"
-          >
-            <path
-              d="
-              M0,70
-              L55,92 L100,58 L160,105 L220,68
-              L280,116 L350,62 L430,122 L500,72
-              L580,128 L660,78 L740,135 L825,70
-              L905,124 L990,64 L1070,116 L1160,72
-              L1240,126 L1320,68 L1380,108 L1440,82
-              L1440,220
-              L0,220
-              Z
-              "
-              fill="#f5f5f2"
-            />
-
-            <path
-              d="
-              M0,70
-              L55,92 L100,58 L160,105 L220,68
-              L280,116 L350,62 L430,122 L500,72
-              L580,128 L660,78 L740,135 L825,70
-              L905,124 L990,64 L1070,116 L1160,72
-              L1240,126 L1320,68 L1380,108 L1440,82
-              "
-              fill="none"
-              stroke="rgba(0,0,0,0.35)"
-              strokeWidth="7"
-              strokeLinecap="round"
-            />
-
-            <path
-              d="
-              M0,88
-              L55,104 L100,80 L160,122 L220,86
-              L280,136 L350,82 L430,140 L500,92
-              L580,146 L660,96 L740,152 L825,88
-              L905,142 L990,84 L1070,134 L1160,92
-              L1240,144 L1320,86 L1380,124 L1440,100
-              "
-              fill="none"
-              stroke="rgba(255,255,255,0.55)"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-          </svg>
-
-        </div>
-
       </section>
 
-      <section className="relative z-30 bg-[#f5f5f2] px-6 py-28 text-black md:px-10">
+      <div className="relative z-30 -mt-32 h-32 overflow-hidden bg-transparent md:-mt-44 md:h-44">
+        <Image
+          src={tornPaper}
+          alt=""
+          className="h-full w-full object-cover brightness-0"
+          priority
+        />
+      </div>
+
+      <section className="relative z-20 -mt-1 bg-[#050505] px-6 py-28 text-white md:px-10">
 
         <div className="mx-auto max-w-6xl">
 
-          <p className="mb-4 text-xs uppercase tracking-[0.35em] text-black/40">
+          <p className="mb-4 text-xs uppercase tracking-[0.35em] text-white/40">
             WHAT WE DO
           </p>
 
@@ -147,7 +99,7 @@ export default function Home() {
             Premium websites for businesses that want to look expensive.
           </h2>
 
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-black/55">
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/55">
             We design clean, cinematic and high converting digital experiences
             for local businesses, service providers and modern brands.
           </p>
