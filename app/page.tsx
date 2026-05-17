@@ -264,9 +264,9 @@ export default function Home() {
 
           <div>
 
-            <h3 href="/contact" className="text-lg font-semibold">
-              Contact Us
-            </h3>
+<a href="/contact" className="text-lg font-semibold">
+  Contact Us
+</a>
 
             <div className="mt-6 space-y-4 text-sm text-white/55">
 
