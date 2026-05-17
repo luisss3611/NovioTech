@@ -49,7 +49,7 @@ export default function Home() {
             <Image
               src={logo}
               alt="Novio Technologies"
-              className="w-32 md:w-44 h-auto"
+              className="w-44 md:w-44 h-auto"
               priority
             />
 
