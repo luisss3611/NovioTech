@@ -81,55 +81,41 @@ export default function Home() {
 
         </div>
 
-{/* Real Torn Paper Transition */}
-<div className="absolute bottom-0 left-0 z-20 w-full overflow-hidden leading-none">
-
-  {/* Shadow */}
-  <div className="absolute inset-x-0 top-0 h-12 bg-black/40 blur-2xl" />
-
+{/* Torn Paper Transition */}
+<div className="absolute bottom-0 left-0 z-20 w-full overflow-hidden leading-none drop-shadow-[0_-18px_35px_rgba(0,0,0,0.9)]">
   <svg
-    viewBox="0 0 1440 220"
+    viewBox="0 0 1440 180"
     preserveAspectRatio="none"
-    className="relative h-40 md:h-56 w-full"
+    className="h-36 md:h-48 w-full"
   >
     <path
       d="
-      M0,80
-      C60,120 120,60 180,100
-      C240,140 300,70 360,110
-      C420,150 480,75 540,120
-      C600,160 660,85 720,130
-      C780,170 840,95 900,135
-      C960,175 1020,90 1080,125
-      C1140,160 1200,85 1260,115
-      C1320,145 1380,95 1440,120
-      L1440,220
-      L0,220
-      Z
+      M0,95
+      L40,110 L82,90 L130,118 L175,84
+      L230,108 L280,98 L330,125 L390,86
+      L455,115 L510,92 L570,130 L640,88
+      L710,118 L770,96 L840,135 L910,92
+      L975,120 L1045,86 L1110,116 L1185,96
+      L1250,128 L1320,90 L1385,112 L1440,98
+      L1440,180 L0,180 Z
       "
       fill="#050505"
     />
-
-    {/* subtle paper edge */}
     <path
       d="
-      M0,80
-      C60,120 120,60 180,100
-      C240,140 300,70 360,110
-      C420,150 480,75 540,120
-      C600,160 660,85 720,130
-      C780,170 840,95 900,135
-      C960,175 1020,90 1080,125
-      C1140,160 1200,85 1260,115
-      C1320,145 1380,95 1440,120
+      M0,95
+      L40,110 L82,90 L130,118 L175,84
+      L230,108 L280,98 L330,125 L390,86
+      L455,115 L510,92 L570,130 L640,88
+      L710,118 L770,96 L840,135 L910,92
+      L975,120 L1045,86 L1110,116 L1185,96
+      L1250,128 L1320,90 L1385,112 L1440,98
       "
       fill="none"
-      stroke="rgba(255,255,255,0.06)"
-      strokeWidth="3"
-      strokeLinecap="round"
+      stroke="rgba(255,255,255,0.07)"
+      strokeWidth="2"
     />
   </svg>
-
 </div>
 
       </section>
