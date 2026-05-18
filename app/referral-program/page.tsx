@@ -9,7 +9,7 @@ export default function ContactPage() {
 
       <div className="h-screen w-full bg-[#050505]" />
 
-      <Footer />
+        <Footer />
     </main>
   )
 }
