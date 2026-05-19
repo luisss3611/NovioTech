@@ -24,7 +24,7 @@ export default function Footer() {
 
           <div className="mt-8">
 
-            <p className="text-lg font-semibold text-white">
+            <p className="text-lg font-semibold text-white hover:text-white/80">
               <a href="tel:+491778932219">+49 177 8932219</a>
             </p>
 
@@ -101,7 +101,7 @@ export default function Footer() {
 
             <div>
               <p className="text-white">Email:</p>
-              <p><a href="mailto:contact@noviotechnologies.com">contact@noviotechnologies.com</a></p>
+              <p><a href="mailto:contact@noviotechnologies.com" className="hover:text-white">contact@noviotechnologies.com</a></p>
             </div>
 
           </div>

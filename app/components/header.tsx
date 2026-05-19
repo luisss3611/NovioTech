@@ -92,8 +92,8 @@ export default function Header() {
 </svg>            </button>
 
             <div className="leading-tight">
-              <p className="text-[10px] uppercase tracking-[0.22em] text-white/40">Call us now:</p>
-              <p className="mt-1 text-[17px] font-semibold text-white">+49 177 8932219</p>
+              <p className="text-[10px] uppercase tracking-[0.22em] text-white/40"><a href="tel:+491778932219" className="transition">Call us now:</a></p>
+              <p className="mt-1 text-[17px] font-semibold text-white"><a href="tel:+491778932219" className="text-white hover:text-white/70 transition">+49 177 8932219</a></p>
             </div>
           </div>
         </div>
@@ -137,8 +137,11 @@ export default function Header() {
           </button>
 
           <div className="mt-5 border-t border-white/10 pt-5">
-            <p className="text-[10px] uppercase tracking-[0.22em] text-white/40">Call us now:</p>
-            <p className="mt-1 text-[17px] font-semibold text-white">+49 177 8932219</p>
+
+<p className="text-[10px] uppercase tracking-[0.22em] text-white/40">
+  <a href="tel:+491778932219" className="transition">Call us now:</a></p>
+<p className="mt-1 text-[17px] font-semibold hover:text-red">
+  <a href="tel:+491778932219"className="text-white hover:text-white/70 transition">+49 177 8932219</a></p>
           </div>
         </div>
       )}
