@@ -104,6 +104,11 @@ export default function Footer() {
               <p><a href="mailto:contact@noviotechnologies.com" className="hover:text-white">contact@noviotechnologies.com</a></p>
             </div>
 
+            <div>
+              <p className="text-white">Phone:</p>
+              <p><a href="tel:+491778932219" className="hover:text-white">+49 177 8932219</a></p>
+            </div>
+
           </div>
 
           <div className="mt-8 flex gap-3">
