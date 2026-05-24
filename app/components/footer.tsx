@@ -224,7 +224,7 @@ export default function Footer() {
       <div className="mx-auto mt-16 flex max-w-7xl flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
 
         <p>
-          Copyright © {new Date().getFullYear()} Novio Technologies. All rights reserved.
+          Copyright © {new Date().getFullYear()} <a href="https://noviotechnologies.com" className="underline">Novio Technologies</a>. All rights reserved.
         </p>
 
         <div className="flex gap-6">
