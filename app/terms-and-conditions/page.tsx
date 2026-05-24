@@ -76,37 +76,46 @@ export default function TermsAndConditionsPage() {
             </p>
           </div>
           <div className="grid gap-20 md:grid-cols-[280px_1fr]">
-            <aside className="sticky top-32 hidden h-fit max-h-[70vh] space-y-5 overflow-y-auto pr-4 md:block">
-              {sections.map((section) => (
-                <button
-                  key={section.id}
-                  onClick={() => scrollToSection(section.id)}
-                  className={`
-                    group relative block border-l pl-5 text-left transition-all duration-300
-                    ${
-                      activeSection === section.id
-                        ? "border-[#b3a5ff] text-[#b3a5ff]"
-                        : "border-white/10 text-white/45 hover:border-[#b3a5ff] hover:text-[#b3a5ff]"
-                    }
-                  `}
-                >
-                  <span className="relative inline-block">
-                    {section.label}
-                    <span
-                      className={`
-                        absolute -bottom-1 left-0 h-px bg-[#b3a5ff] transition-all duration-300
-                        ${
-                          activeSection === section.id
-                            ? "w-full"
-                            : "w-0 group-hover:w-full"
-                        }
-                      `}
-                    />
-                  </span>
-                </button>
-              ))}
-            </aside>
-            <div className="space-y-24">
+<aside className="sticky top-32 hidden self-start overflow-hidden pr-4 md:block">
+  <div
+    className="space-y-5 transition-transform duration-500 ease-out"
+    style={{
+      transform: `translateY(-${Math.max(
+        0,
+        sections.findIndex((section) => section.id === activeSection) * 46 - 220
+      )}px)`,
+    }}
+  >
+    {sections.map((section) => (
+      <button
+        key={section.id}
+        onClick={() => scrollToSection(section.id)}
+        className={`
+          group relative block border-l pl-5 text-left transition-all duration-300
+          ${
+            activeSection === section.id
+              ? "border-[#b3a5ff] text-[#b3a5ff]"
+              : "border-white/10 text-white/45 hover:border-[#b3a5ff] hover:text-[#b3a5ff]"
+          }
+        `}
+      >
+        <span className="relative inline-block">
+          {section.label}
+          <span
+            className={`
+              absolute -bottom-1 left-0 h-px bg-[#b3a5ff] transition-all duration-300
+              ${
+                activeSection === section.id
+                  ? "w-full"
+                  : "w-0 group-hover:w-full"
+              }
+            `}
+          />
+        </span>
+      </button>
+    ))}
+  </div>
+</aside>            <div className="space-y-24">
               <section id="agreement" className="scroll-mt-32">
                 <h2 className={titleClass}>Agreement to Our Legal Terms</h2>
                 <p className={textClass}>
