@@ -72,7 +72,7 @@ export default function TermsAndConditionsPage() {
               Terms and Conditions
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/50">
-              Last updated May 21, 2026
+              Effective Date: 20/05/2026
             </p>
           </div>
           <div className="grid gap-20 md:grid-cols-[280px_1fr]">
