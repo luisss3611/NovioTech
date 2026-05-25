@@ -14,33 +14,27 @@ export default function Home() {
 
       <section className="relative h-screen overflow-hidden">
 
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 hidden h-full w-full object-cover opacity-70 md:block"
-        >
-          <source
-            src="desktop_vid.mp4"
-            type="video/mp4"
-          />
-        </video>
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="absolute inset-0 hidden h-full w-full object-cover opacity-70 md:block"
+>
+  <source src="/desktop_vid.mp4" type="video/mp4" />
+</video>
 
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 h-full w-full object-cover opacity-70 md:hidden"
-        >
-          <source
-            src="mobile_vid.mp4"
-            type="video/mp4"
-          />
-        </video>
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="absolute inset-0 h-full w-full object-cover opacity-70 md:hidden"
+>
+  <source src="/mobile_vid.mp4" type="video/mp4" />
+</video>
 
         <div className="absolute inset-0 bg-black/65" />
 
