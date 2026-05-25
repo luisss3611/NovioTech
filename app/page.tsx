@@ -23,7 +23,7 @@ export default function Home() {
           className="absolute inset-0 hidden h-full w-full object-cover opacity-70 md:block"
         >
           <source
-            src="https://res.cloudinary.com/dky0vdva5/video/upload/q_auto/f_auto/v1779053491/v1_landing_page_vid_vzmz4x.mov"
+            src="pc_vid.mov"
             type="video/mp4"
           />
         </video>
@@ -37,7 +37,7 @@ export default function Home() {
           className="absolute inset-0 h-full w-full object-cover opacity-70 md:hidden"
         >
           <source
-            src="https://res.cloudinary.com/dky0vdva5/video/upload/q_auto/f_auto/v1779053480/0517_xovrnq.mov"
+            src="mobile_vid.mov"
             type="video/mp4"
           />
         </video>
