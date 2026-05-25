@@ -14,27 +14,33 @@ export default function Home() {
 
       <section className="relative h-screen overflow-hidden">
 
-<video
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="auto"
-  className="absolute inset-0 hidden h-full w-full object-cover opacity-70 md:block"
->
-  <source src="/desktop_vid.mp4" type="video/mp4" />
-</video>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 hidden h-full w-full object-cover opacity-70 md:block"
+        >
+          <source
+            src="https://res.cloudinary.com/dky0vdva5/video/upload/q_auto/f_auto/v1779053491/v1_landing_page_vid_vzmz4x.mov"
+            type="video/mp4"
+          />
+        </video>
 
-<video
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="auto"
-  className="absolute inset-0 h-full w-full object-cover opacity-70 md:hidden"
->
-  <source src="/mobile_vid.mp4" type="video/mp4" />
-</video>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover opacity-70 md:hidden"
+        >
+          <source
+            src="https://res.cloudinary.com/dky0vdva5/video/upload/q_auto/f_auto/v1779053480/0517_xovrnq.mov"
+            type="video/mp4"
+          />
+        </video>
 
         <div className="absolute inset-0 bg-black/65" />
 
