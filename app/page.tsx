@@ -23,7 +23,7 @@ export default function Home() {
           className="absolute inset-0 hidden h-full w-full object-cover opacity-70 md:block"
         >
           <source
-            src="pc_vid.mov"
+            src="desktop_vid.mp4"
             type="video/mp4"
           />
         </video>
@@ -37,7 +37,7 @@ export default function Home() {
           className="absolute inset-0 h-full w-full object-cover opacity-70 md:hidden"
         >
           <source
-            src="mobile_vid.mov"
+            src="mobile_vid.mp4"
             type="video/mp4"
           />
         </video>
