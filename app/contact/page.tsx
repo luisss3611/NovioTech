@@ -168,7 +168,7 @@ function closeToast() {
                       </p>
 
                       <p className="mt-1 text-lg font-medium">
-                        +49 177 8932219
+                        <a href="tel:+491778932219">+49 177 8932219</a>
                       </p>
                     </div>
                   </div>
@@ -184,7 +184,7 @@ function closeToast() {
                       </p>
 
                       <p className="mt-1 text-lg font-medium">
-                        contact@noviotechnologies.com
+                        <a href="mailto:contact@noviotechnologies.com">contact@noviotechnologies.com</a>
                       </p>
                     </div>
                   </div>
