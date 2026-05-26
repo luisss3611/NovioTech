@@ -8,6 +8,8 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 
 export default function ContactPage() {
+  const [showToast, setShowToast] = useState(false)
+const [toastLeaving, setToastLeaving] = useState(false)
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle")
@@ -22,7 +24,38 @@ export default function ContactPage() {
     return () => clearTimeout(timer)
   }, [status])
 
+    useEffect(() => {
+  if (status !== "success") return
+
+  setShowToast(true)
+  setToastLeaving(false)
+
+  const leaveTimer = setTimeout(() => {
+    setToastLeaving(true)
+  }, 9500)
+
+  const removeTimer = setTimeout(() => {
+    setShowToast(false)
+    setStatus("idle")
+  }, 10000)
+
+  return () => {
+    clearTimeout(leaveTimer)
+    clearTimeout(removeTimer)
+  }
+}, [status])
+
+
 async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+
+function closeToast() {
+  setToastLeaving(true)
+
+  setTimeout(() => {
+    setShowToast(false)
+    setStatus("idle")
+  }, 350)
+}
   e.preventDefault()
 
   const form = e.currentTarget
@@ -64,28 +97,6 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#050505] text-white">
-      <style jsx global>{`
-        @keyframes toastIn {
-          from {
-            opacity: 0;
-            transform: translateY(-18px) translateX(18px) scale(0.96);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) translateX(0) scale(1);
-          }
-        }
-
-        @keyframes progressFill {
-          from {
-            width: 0%;
-          }
-          to {
-            width: 100%;
-          }
-        }
-      `}</style>
-
       <Header />
 
       <section className="px-6 pb-16 pt-24 md:px-10 md:pt-28">
@@ -439,56 +450,84 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
       </section>
 
       {status === "success" && (
-        <div
-          className="
-            fixed right-6 top-6 z-[999]
-            w-[calc(100%-3rem)] max-w-md overflow-hidden
-            rounded-2xl border border-white/10
-            bg-[#0b0b0b]/95 shadow-[0_20px_80px_rgba(0,0,0,0.45)]
-            backdrop-blur-xl
-          "
+ <div
+    className="
+      fixed right-8 top-8 z-[9999]
+      w-[430px] overflow-hidden rounded-[1.7rem]
+      border border-white/10 bg-[#070707]/90
+      shadow-[0_30px_120px_rgba(0,0,0,0.65)]
+      backdrop-blur-2xl
+    "
+    style={{
+      animation: toastLeaving
+        ? "toastOut 0.35s ease-in forwards"
+        : "toastIn 0.45s cubic-bezier(0.16,1,0.3,1) forwards",
+    }}
+  >
+    <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#b3a5ff]/20 blur-3xl" />
+
+    <div className="relative p-5">
+<div className="flex items-start justify-between gap-5">
+  <div className="flex gap-4">
+    <div className="relative flex h-14 w-14 items-center justify-center rounded-full border border-[#b3a5ff]/20 bg-[#b3a5ff]/10">
+      <div className="absolute inset-0 rounded-full bg-[#b3a5ff]/20 blur-xl" />
+
+      <svg
+        className="relative z-10"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M6 12.5L10 16.5L18 7.5"
+          stroke="#c4b5fd"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           style={{
-            animation: "toastIn 0.35s ease-out forwards",
+            strokeDasharray: 24,
+            strokeDashoffset: 24,
+            animation: "checkDraw 0.6s ease forwards 0.2s",
           }}
-        >
-          <div className="flex items-start gap-4 p-5">
-            <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#b3a5ff]/20 bg-[#b3a5ff]/10">
-              <span className="text-xl text-[#b3a5ff]">✓</span>
-            </div>
+        />
+      </svg>
+    </div>
 
-            <div className="flex-1">
-              <p className="text-xs uppercase tracking-[0.28em] text-[#b3a5ff]">
-                Email sent
-              </p>
+    <div>
+      <p className="text-[11px] uppercase tracking-[0.35em] text-[#b3a5ff]">
+        Request sent
+      </p>
 
-              <h3 className="mt-1 text-lg font-semibold tracking-[-0.03em] text-white">
-                Your message was sent successfully.
-              </h3>
+      <h3 className="mt-3 text-xl font-semibold tracking-[-0.04em] text-white">
+        We received your message.
+      </h3>
 
-              <p className="mt-1 text-sm leading-relaxed text-white/45">
-                Thanks for reaching out. We will get back to you shortly.
-              </p>
-            </div>
+      <p className="mt-2 max-w-[310px] text-sm leading-relaxed text-white/45">
+        Thanks for reaching out. We will get back to you shortly.
+      </p>
+    </div>
+  </div>
 
-            <button
-              type="button"
-              onClick={closeToast}
-              className="text-white/35 transition hover:text-white"
-            >
-              ✕
-            </button>
-          </div>
-
-          <div className="h-[3px] w-full bg-white/10">
-            <div
-              className="h-full bg-white"
-              style={{
-                animation: "progressFill 10s linear forwards",
-              }}
-            />
-          </div>
-        </div>
-      )}
+  <button
+    type="button"
+    onClick={closeToast}
+    className="rounded-full border border-white/10 px-3 py-1 text-sm text-white/40 transition hover:border-white/20 hover:text-white"
+  >
+    ×
+  </button>
+</div>
+      <div className="mt-5 h-[3px] w-full overflow-hidden rounded-full bg-white/10">
+        <div
+          className="h-full rounded-full bg-white"
+          style={{
+            animation: "progressFill 10s linear forwards",
+          }}
+        />
+      </div>
+    </div>
+  </div>
+)}
 
       <Footer />
     </main>
