@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+RESEND_API_KEY=re_54md1PRs_CdHUT4Hz3grEUma46WNeTVdF
+CONTACT_TO_EMAIL=contact@noviotechnologies.com
