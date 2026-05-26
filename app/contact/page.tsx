@@ -215,7 +215,7 @@ function closeToast() {
                 id="my-cal-inline-30min"
                 className="w-full max-w-6xl"
                 style={{
-                  height: "650px",
+                  height: "500px",
                   overflow: "hidden",
                 }}
               />
