@@ -17,40 +17,51 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false)
 
   return (
-    <header className="absolute top-0 left-0 z-30 w-full px-6 py-6 md:px-10">
+    <header className="absolute left-0 top-0 z-30 w-full px-6 py-6 md:px-10">
       <div className="flex items-center justify-between">
         <a href="/">
-          <Image src={logo} alt="Novio Technologies" className="w-40 md:w-44 h-auto" priority />
+          <Image
+            src={logo}
+            alt="Novio Technologies"
+            className="h-auto w-40 md:w-44"
+            priority
+          />
         </a>
 
         <button
           onClick={() => setOpen(!open)}
-          className="xl:hidden flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white backdrop-blur-md"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white backdrop-blur-md xl:hidden"
         >
           {open ? "✕" : "☰"}
         </button>
 
-        <div className="hidden xl:flex items-center gap-6 text-white">
+        <div className="hidden items-center gap-6 text-white xl:flex">
           <nav className="flex items-center gap-7 text-[14px] font-medium text-white/80">
-            <a href="/" className="transition hover:text-white">Home</a>
-            <a href="/about-us" className="transition hover:text-white">About Us</a>
+            <a href="/" className="transition hover:text-white">
+              Home
+            </a>
 
-                <div className="group relative py-4 -my-4">
-                  <button className="flex items-center gap-1 transition hover:text-white">
-                Services <svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="14"
-  height="14"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  strokeWidth="2"
-  strokeLinecap="round"
-  strokeLinejoin="round"
-  className="mt-[1px]"
->
-  <path d="m6 9 6 6 6-6"/>
-</svg>
+            <a href="/about-us" className="transition hover:text-white">
+              About Us
+            </a>
+
+            <div className="group relative -my-4 py-4">
+              <button className="flex items-center gap-1 transition hover:text-white">
+                Services
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mt-[1px]"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
               </button>
 
               <div className="invisible absolute left-0 top-full w-64 rounded-2xl border border-white/10 bg-black/80 p-3 opacity-0 shadow-2xl backdrop-blur-xl transition group-hover:visible group-hover:opacity-100">
@@ -66,34 +77,50 @@ export default function Header() {
               </div>
             </div>
 
-            <a href="/contact" className="transition hover:text-white">Contact Us</a>
-            <a href="/referral-program" className="transition hover:text-white">Referral Program</a>
+            <a href="/contact" className="transition hover:text-white">
+              Contact Us
+            </a>
+
+            <a href="/referral-program" className="transition hover:text-white">
+              Referral Program
+            </a>
           </nav>
 
           <div className="h-8 w-px bg-white/10" />
 
           <div className="flex items-center gap-4">
-            <button className="group flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:scale-105 hover:bg-[#b3a5ff]">
+            <a
+              href="/contact"
+              style={{ WebkitTapHighlightColor: "transparent" }}
+              className="group flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black no-underline outline-none transition hover:scale-105 hover:bg-[#b3a5ff] focus:outline-none focus:ring-0 active:outline-none active:ring-0"
+            >
               <span>Get Started</span>
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="16"
-  height="16"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  strokeWidth="2"
-  strokeLinecap="round"
-  strokeLinejoin="round"
-  className="transition group-hover:translate-x-1"
->
-  <path d="M5 12h14"/>
-  <path d="m12 5 7 7-7 7"/>
-</svg>            </button>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="transition group-hover:translate-x-1"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
 
             <div className="leading-tight">
-              <p className="text-[10px] uppercase tracking-[0.22em] text-white/40"><a href="tel:+491778932219" className="transition">Call us now:</a></p>
-              <p className="mt-1 text-[17px] font-semibold text-white"><a href="tel:+491778932219" className="text-white hover:text-white/70 transition">+49 177 8932219</a></p>
+              <p className="text-[10px] uppercase tracking-[0.22em] text-white/40">
+                Call us now:
+              </p>
+
+              <p className="mt-1 text-[17px] font-semibold text-white">
+                <a href="tel:+491778932219">+49 177 8932219</a>
+              </p>
             </div>
           </div>
         </div>
@@ -102,8 +129,13 @@ export default function Header() {
       {open && (
         <div className="mt-5 rounded-3xl border border-white/10 bg-black/80 p-6 text-white shadow-2xl backdrop-blur-xl xl:hidden">
           <nav className="flex flex-col gap-5 text-sm font-medium text-white/80">
-            <a href="/" onClick={() => setOpen(false)}>Home</a>
-            <a href="/about-us" onClick={() => setOpen(false)}>About Us</a>
+            <a href="/" onClick={() => setOpen(false)}>
+              Home
+            </a>
+
+            <a href="/about-us" onClick={() => setOpen(false)}>
+              About Us
+            </a>
 
             <button
               onClick={() => setServicesOpen(!servicesOpen)}
@@ -127,21 +159,33 @@ export default function Header() {
               </div>
             )}
 
-            <a href="/contact" onClick={() => setOpen(false)}>Contact Us</a>
-            <a href="/referral-program" onClick={() => setOpen(false)}>Referral Program</a>
+            <a href="/contact" onClick={() => setOpen(false)}>
+              Contact Us
+            </a>
+
+            <a href="/referral-program" onClick={() => setOpen(false)}>
+              Referral Program
+            </a>
           </nav>
 
-          <button className="group mt-6 flex w-full items-center justify-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#b3a5ff]">
+          <a
+            href="/contact"
+            onClick={() => setOpen(false)}
+            style={{ WebkitTapHighlightColor: "transparent" }}
+            className="group mt-6 flex w-full items-center justify-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black no-underline outline-none transition hover:bg-[#b3a5ff] focus:outline-none focus:ring-0 active:outline-none active:ring-0"
+          >
             <span>Get Started</span>
             <span className="transition group-hover:translate-x-1">→</span>
-          </button>
+          </a>
 
           <div className="mt-5 border-t border-white/10 pt-5">
+            <p className="text-[10px] uppercase tracking-[0.22em] text-white/40">
+              Call us now:
+            </p>
 
-<p className="text-[10px] uppercase tracking-[0.22em] text-white/40">
-  <a href="tel:+491778932219" className="transition">Call us now:</a></p>
-<p className="mt-1 text-[17px] font-semibold hover:text-red">
-  <a href="tel:+491778932219"className="text-white hover:text-white/70 transition">+49 177 8932219</a></p>
+            <p className="mt-1 text-[17px] font-semibold text-white">
+              <a href="tel:+491778932219">+49 177 8932219</a>
+            </p>
           </div>
         </div>
       )}

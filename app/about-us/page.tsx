@@ -34,12 +34,6 @@ export default function AboutPage() {
                   Work With Us
                 </a>
 
-                <a
-                  href="/services"
-                  className="rounded-full border border-white/10 px-7 py-4 text-sm font-semibold text-white/70 transition hover:border-[#b3a5ff] hover:text-[#b3a5ff]"
-                >
-                  View Services
-                </a>
               </div>
             </div>
 
