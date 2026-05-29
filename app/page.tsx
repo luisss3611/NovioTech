@@ -310,100 +310,97 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative z-20 bg-black px-6 py-16 text-white md:px-10 md:py-24">
-        <div className="mx-auto max-w-4xl">
+<section className="relative z-20 bg-black px-4 py-16 text-white sm:px-6 md:px-10 md:py-24">
+  <div className="mx-auto max-w-5xl">
+    <div className="mb-10 text-center">
+      <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-[#b3a5ff]">
+        BOOK A CALL
+      </p>
 
-          <div className="mb-10 text-center">
-            <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-[#b3a5ff]">
-              BOOK A CALL
-            </p>
+      <h2 className="mx-auto max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.05em] md:text-6xl">
+        Let’s build something exceptional together.
+      </h2>
 
-            <h2 className="mx-auto max-w-3xl text-4xl font-semibold leading-tight tracking-[-0.05em] md:text-6xl">
-              Let’s build something exceptional together.
-            </h2>
+      <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/50 md:text-lg">
+        Schedule a quick strategy call and let’s talk about your goals, branding and how Novio Technologies can help your business grow online.
+      </p>
+    </div>
 
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/50 md:text-lg">
-              Schedule a quick strategy call and let’s talk about your goals, branding and how Novio Technologies can help your business grow online.
-            </p>
-          </div>
+    <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-1 backdrop-blur-xl md:rounded-[2rem] md:p-2">
+      <div
+        id="my-cal-inline-30min"
+        className="h-[1180px] w-full sm:h-[1080px] md:h-[760px]"
+        style={{
+          overflow: "hidden",
+          borderRadius: "1.25rem",
+        }}
+      />
+    </div>
 
-          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-2 backdrop-blur-xl">
-<div
-  id="my-cal-inline-30min"
-  className="w-full"
-  style={{
-    height: "500px",
-    overflow: "hidden",
-    borderRadius: "1.5rem",
-  }}
-/>
-          </div>
+    <Script
+      id="cal-inline-embed"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{
+        __html: `
+          (function (C, A, L) {
+            let p = function (a, ar) { a.q.push(ar); };
+            let d = C.document;
 
-          <Script
-            id="cal-inline-embed"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function (C, A, L) {
-                  let p = function (a, ar) { a.q.push(ar); };
-                  let d = C.document;
+            C.Cal = C.Cal || function () {
+              let cal = C.Cal;
+              let ar = arguments;
 
-                  C.Cal = C.Cal || function () {
-                    let cal = C.Cal;
-                    let ar = arguments;
+              if (!cal.loaded) {
+                cal.ns = {};
+                cal.q = cal.q || [];
+                d.head.appendChild(d.createElement("script")).src = A;
+                cal.loaded = true;
+              }
 
-                    if (!cal.loaded) {
-                      cal.ns = {};
-                      cal.q = cal.q || [];
-                      d.head.appendChild(d.createElement("script")).src = A;
-                      cal.loaded = true;
-                    }
+              if (ar[0] === L) {
+                const api = function () { p(api, arguments); };
+                const namespace = ar[1];
+                api.q = api.q || [];
 
-                    if (ar[0] === L) {
-                      const api = function () { p(api, arguments); };
-                      const namespace = ar[1];
-                      api.q = api.q || [];
+                if (typeof namespace === "string") {
+                  cal.ns[namespace] = cal.ns[namespace] || api;
+                  p(cal.ns[namespace], ar);
+                  p(cal, ["initNamespace", namespace]);
+                } else {
+                  p(cal, ar);
+                }
 
-                      if (typeof namespace === "string") {
-                        cal.ns[namespace] = cal.ns[namespace] || api;
-                        p(cal.ns[namespace], ar);
-                        p(cal, ["initNamespace", namespace]);
-                      } else {
-                        p(cal, ar);
-                      }
+                return;
+              }
 
-                      return;
-                    }
+              p(cal, ar);
+            };
+          })(window, "https://app.cal.com/embed/embed.js", "init");
 
-                    p(cal, ar);
-                  };
-                })(window, "https://app.cal.com/embed/embed.js", "init");
+          Cal("init", "30min", {
+            origin: "https://app.cal.com"
+          });
 
-                Cal("init", "30min", {
-                  origin: "https://app.cal.com"
-                });
+          Cal.ns["30min"]("inline", {
+            elementOrSelector: "#my-cal-inline-30min",
+            config: {
+              layout: "month_view",
+              theme: "dark",
+              hideBranding: true
+            },
+            calLink: "luis-edc75g/30min",
+          });
 
-                Cal.ns["30min"]("inline", {
-                  elementOrSelector: "#my-cal-inline-30min",
-                  config: {
-                    layout: "month_view",
-                    theme: "dark",
-                    hideBranding: true
-                  },
-                  calLink: "luis-edc75g/30min",
-                });
-
-                Cal.ns["30min"]("ui", {
-                  theme: "dark",
-                  hideEventTypeDetails: false,
-                  layout: "month_view"
-                });
-              `,
-            }}
-          />
-
-        </div>
-      </section>
+          Cal.ns["30min"]("ui", {
+            theme: "dark",
+            hideEventTypeDetails: false,
+            layout: "month_view"
+          });
+        `,
+      }}
+    />
+  </div>
+</section>
 
       <Footer />
     </main>
