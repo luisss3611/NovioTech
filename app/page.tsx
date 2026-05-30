@@ -116,8 +116,6 @@ useEffect(() => {
           </a>
         </div>
 
-<div className="absolute inset-0 bg-black/75 md:bg-black/65" />
-
 <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 pt-20 text-center text-white md:pt-0">
   <p className="mb-4 text-[10px] uppercase tracking-[0.35em] text-[#b3a5ff] md:text-sm">
     DIGITAL EXPERIENCES
