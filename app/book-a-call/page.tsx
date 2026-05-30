@@ -28,17 +28,18 @@ export default function BookACallPage() {
             </p>
           </div>
 
-          <div className="mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-2 backdrop-blur-xl">
-            <div
-              id="my-cal-inline-30min"
-              className="w-full"
-              style={{
-                height: "500px",
-                overflow: "hidden",
-                borderRadius: "1.5rem",
-              }}
-            />
-          </div>
+<div className="mx-auto max-w-5xl">
+  <div
+    id="my-cal-inline-30min"
+    className="w-full"
+    style={{
+      height: "850px",
+      overflow: "hidden",
+      border: "none",
+      borderRadius: "0",
+    }}
+  />
+</div>
 
           <Script
             id="cal-inline-embed"

@@ -14,15 +14,40 @@ export default function Home() {
     mobileVideoRef.current?.play().catch(() => {})
   }
 
-  useEffect(() => {
-    startVideos()
+useEffect(() => {
+  const playVideos = () => {
+    ;[desktopVideoRef.current, mobileVideoRef.current].forEach((video) => {
+      if (!video) return
 
-    const timeout = setTimeout(() => {
-      startVideos()
-    }, 800)
+      video.muted = true
+      video.defaultMuted = true
 
-    return () => clearTimeout(timeout)
-  }, [])
+      const promise = video.play()
+
+      if (promise !== undefined) {
+        promise.catch(() => {})
+      }
+    })
+  }
+
+  playVideos()
+
+  const timeout1 = setTimeout(playVideos, 300)
+  const timeout2 = setTimeout(playVideos, 1000)
+  const timeout3 = setTimeout(playVideos, 2000)
+
+  window.addEventListener("load", playVideos)
+  window.addEventListener("pageshow", playVideos)
+
+  return () => {
+    clearTimeout(timeout1)
+    clearTimeout(timeout2)
+    clearTimeout(timeout3)
+
+    window.removeEventListener("load", playVideos)
+    window.removeEventListener("pageshow", playVideos)
+  }
+}, [])
 
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-black">
@@ -32,29 +57,34 @@ export default function Home() {
         onTouchStart={startVideos}
         className="relative h-screen overflow-hidden"
       >
-        <video
-          ref={desktopVideoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 hidden h-full w-full object-cover opacity-70 md:block"
-        >
-          <source src="/desktop_vid.mp4" type="video/mp4" />
-        </video>
-
-        <video
-          ref={mobileVideoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 h-full w-full object-cover opacity-70 md:hidden"
-        >
-          <source src="/mobile_vid.mp4" type="video/mp4" />
-        </video>
+<video
+  ref={desktopVideoRef}
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  disablePictureInPicture
+  onCanPlay={startVideos}
+  onLoadedData={startVideos}
+  className="absolute inset-0 hidden h-full w-full object-cover opacity-70 md:block"
+>
+  <source src="/desktop_vid.mp4" type="video/mp4" />
+</video>
+<video
+  ref={mobileVideoRef}
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  disablePictureInPicture
+  onCanPlay={startVideos}
+  onLoadedData={startVideos}
+  className="absolute inset-0 h-full w-full object-cover opacity-70 md:hidden"
+>
+  <source src="/mobile_vid.mp4" type="video/mp4" />
+</video>
 
         <div className="absolute inset-0 bg-black/65" />
 
@@ -326,16 +356,15 @@ export default function Home() {
       </p>
     </div>
 
-    <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-1 backdrop-blur-xl md:rounded-[2rem] md:p-2">
-      <div
-        id="my-cal-inline-30min"
-        className="h-[1180px] w-full sm:h-[1080px] md:h-[760px]"
-        style={{
-          overflow: "hidden",
-          borderRadius: "1.25rem",
-        }}
-      />
-    </div>
+<div className="w-full overflow-hidden">
+  <div
+    id="my-cal-inline-30min"
+    className="h-[1180px] w-full sm:h-[1080px] md:h-[760px]"
+    style={{
+      overflow: "hidden",
+    }}
+  />
+</div>
 
     <Script
       id="cal-inline-embed"
