@@ -116,31 +116,32 @@ useEffect(() => {
           </a>
         </div>
 
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
-          <p className="mb-4 text-[10px] uppercase tracking-[0.35em] text-[#b3a5ff] md:text-sm">
-            DIGITAL EXPERIENCES
-          </p>
+<div className="absolute inset-0 bg-black/75 md:bg-black/65" />
 
-          <h1 className="max-w-5xl text-[52px] font-semibold leading-[0.9] tracking-[-0.08em] md:text-[140px]">
-            Novio Technologies
-          </h1>
+<div className="relative z-10 flex h-full flex-col items-center justify-center px-6 pt-20 text-center text-white md:pt-0">
+  <p className="mb-4 text-[10px] uppercase tracking-[0.35em] text-[#b3a5ff] md:text-sm">
+    DIGITAL EXPERIENCES
+  </p>
 
-          <p className="mt-5 max-w-xl text-sm leading-relaxed text-white/65 md:text-xl">
-            Modern websites and digital experiences for businesses that want to stand out.
-          </p>
+  <h1 className="max-w-[360px] text-[46px] font-semibold leading-[0.92] tracking-[-0.07em] sm:max-w-xl sm:text-[56px] md:max-w-5xl md:text-[140px]">
+    Novio Technologies
+  </h1>
 
-<div className="mt-8 flex justify-center">
-  <a
-    href="/book-a-call"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="rounded-full bg-white px-8 py-4 text-sm font-medium text-black transition hover:scale-105 md:px-10"
-  >
-    Book a Call
-  </a>
-</div>
-        </div>
-      </section>
+  <p className="mt-5 max-w-[340px] text-[17px] leading-relaxed text-white/65 md:max-w-xl md:text-xl">
+    Modern websites and digital experiences for businesses that want to stand out.
+  </p>
+
+  <div className="mt-9 flex justify-center">
+    <a
+      href="/book-a-call"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-full bg-white px-10 py-5 text-base font-medium text-black transition hover:scale-105 md:px-10 md:py-4 md:text-sm"
+    >
+      Book a Call
+    </a>
+  </div>
+</div>      </section>
 
       <section className="relative z-20 bg-[#050607] px-6 py-24 text-white md:px-10 md:py-32">
         <div className="mx-auto max-w-6xl">
